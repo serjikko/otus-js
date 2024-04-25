@@ -25,8 +25,10 @@
         result += i;
         console.log(count, result);
     }
+
+    return result; 
 }
 
 
 
-  module.exports = calculateOddSum;
+    module.exports = calculateOddSum;
