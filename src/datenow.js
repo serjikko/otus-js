@@ -1,5 +1,5 @@
-function datenow(dateString) {
-    const dateNow = new Date(dateString);
+function datenow() {
+    const dateNow = new Date();
     const minutesNow = dateNow.getMinutes() + dateNow.getHours() * 60;
     console.log(`Прошло минут: ${minutesNow}`);
 }
