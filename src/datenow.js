@@ -1,9 +1,22 @@
-function datenow() {
-    const dateNow = new Date();
-    const minutesNow = dateNow.getMinutes() + dateNow.getHours() * 60;
+function datenow(mockDate) {
+    const currentDate = new Date(mockDate);
+    const minutesNow = currentDate.getHours() * 60 + currentDate.getMinutes();
     console.log(`Прошло минут: ${minutesNow}`);
+    return minutesNow; // Возвращаем количество минут
 }
 
-datenow('2024-04-22T18:43:39.595Z'); // Пример строки с датой и временем
-
 module.exports = datenow;
+
+
+// function calculateMinutesPassed() {
+//     const dateInput = prompt("Enter a date (YYYY-MM-DD HH:mm):");
+//     const inputDate = new Date(dateInput);
+//     const currentDate = new Date();
+    
+//     const diffInMilliseconds = currentDate - inputDate;
+//     const minutesPassed = Math.floor(diffInMilliseconds / 60000);
+    
+//     console.log(`Minutes passed since ${dateInput}: ${minutesPassed} minutes.`);
+//   }
+  
+//   calculateMinutesPassed();
